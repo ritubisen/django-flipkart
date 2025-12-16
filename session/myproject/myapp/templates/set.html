@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+</head>
+<body>
+
+  
+
+  <h1>set data !</h1>
+  <form action="{% url 'set_data' %}" method="POST">
+       {% csrf_token %} 
+  <div>
+    
+    <input type="text" name="name" placeholder="Enter name">
+        </div><br>
+  <div class="form-group">
+  
+    <input type="email" name="email" placeholder="Enter email"><br>
+  
+  </div><br>
+  <div class="form-group">
+ 
+    <input type="password"  name="password" placeholder="Password"><br>
+  </div><br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br><br><br>
+</body>
+</html>

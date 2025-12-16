@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+
+ <h1 style="font-size: 50PX;">SESSION</h1><BR></BR>
+
+
+
+{{msg}}
+<form action="{% url 'set' %}" method="get">
+
+
+
+    <button type="submit" >Set-cookies</button>
+</form><br><br><br>
+{% if msg1 %}
+{{msg1}} <br>
+Name:{{data.name}} <br>
+Email:{{data.email}}
+{% endif %} <br>
+
+     <button type="submit" ><a href="{% url 'get' %}">  get_data</a></button><br><br><br>
+
+
+    <button type="submit" ><a href="{% url 'delete' %}"> Delete-cookies</a></button>
+   
+
+   
+
+
+</body>
+</html>
